@@ -8,6 +8,11 @@ public class BattleshipGame {
     static int col = 10;
     public static String[][] board = new String[row][col];
     public static String[][] playerBoard = new String[row][col];
+
+    AircraftCarrier aircraft = new AircraftCarrier();
+    Battleships battleship = new Battleships();
+    Cruiser cruiser = new Cruiser();
+    Destroyer destroyer = new Destroyer();
     
     public static void main(String[] args) {
         
@@ -15,6 +20,8 @@ public class BattleshipGame {
         System.out.println("The ships have been randomly placed");
 
         createBoard(board);
+
+        placeShips(board);
         
     }
 
@@ -36,10 +43,9 @@ public class BattleshipGame {
     }
 
     public static void placeShips(String[][] board) {
-        yes yes
+        int randX = (int) (Math.random() * 10);
+        System.out.println(randX);
         
-        
-
 
     }
 

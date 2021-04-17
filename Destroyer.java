@@ -1,6 +1,6 @@
 public class Destroyer extends Ships {
     public Destroyer() {
-        int size = 2;
-        String letter = "D"; 
+        size = 2;
+        letter = "D"; 
     }
 }

@@ -1,5 +1,6 @@
-public class AircraftCarrier {
-    public AircraftCarrier extends Ships() {
-        
+public class AircraftCarrier extends Ships {
+    public AircraftCarrier() {
+        size = 5
+        letter = "A"
     }
 }
