@@ -19,13 +19,32 @@ public class BattleshipGame {
         System.out.println("Welcome to Battleship game");
         System.out.println("The ships have been randomly placed");
 
-        createBoard(board);
+        createEmptyBoard(board);
 
         placeShips(board);
         
     }
 
-    public static String[][] createBoard(String[][] board) {
+    public void initialize() {
+        this.shotsFired = 0;
+        this.hitsRecorded = 0;
+        this.shipsSunk = 0;
+        totalShips = 0;
+
+        playerBoard();
+        buildShips();
+    }
+
+    public void buildShips() {
+        ships = new ArrayList<>();
+        ships.add(new AircraftCarrier());
+        ships.add(new Battleships());
+        ships.add(new Cruiser());
+        ships.add(new Destroyer());
+    }
+
+
+    public static String[][] createEmptyBoard(String[][] board) {
 
         System.out.println("  ");
         System.out.println("  0 1 2 3 4 5 6 7 8 9");
@@ -42,12 +61,12 @@ public class BattleshipGame {
         return board;
     }
 
-    public static void placeShips(String[][] board) {
-        int randX = (int) (Math.random() * 10);
-        System.out.println(randX);
-        
+    public static void placeRandomShips(String[][] board) {
+
+        Random rand = new Random();
+        int randX;
+        int randY;
+
+
 
     }
-
-
-}
