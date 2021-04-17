@@ -1,6 +1,6 @@
 public class Destroyer extends Ships {
     public Destroyer() {
-        size = 2;
-        letter = "D"; 
+        this.size = 2;
+        this.letter = "D"; 
     }
 }

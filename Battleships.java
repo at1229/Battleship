@@ -1,6 +1,6 @@
 public class Battleships extends Ships{
     public Battleships() {
-        size = 4;
-        letter = "B"; 
+        this.size = 4;
+        this.letter = "B"; 
     }
 }

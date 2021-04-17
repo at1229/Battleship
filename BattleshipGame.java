@@ -44,6 +44,40 @@ public class BattleshipGame {
         ships.add(new Destroyer());
     }
 
+    public static void placeRandomShips() {
+
+        Random random = new Random();
+        int randX;
+        int randY;
+
+        randX = random.nextInt(10);
+        randY = random.nextInt(10);
+
+        for (i = 0; i < ships.length; i++);
+            while (canPlaceShip(randX, randY, board) == true) {
+                
+                
+        }
+
+    }
+
+    public static boolean canPlaceShip(int row, int col, String[][] board) {
+
+        int shipSize = getShipSize;
+
+        if (!(board[row][col] == "-")) {
+            return false;
+        }
+
+        for (int i = 1; i < shipSize; i++) {
+            if (!(board[row][col] == "-")) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
 
     public static String[][] createEmptyBoard(String[][] board) {
 
@@ -62,12 +96,6 @@ public class BattleshipGame {
         return board;
     }
 
-    public static void placeRandomShips(String[][] board) {
+    
 
-        Random rand = new Random();
-        int randX;
-        int randY;
-
-
-
-    }
+}

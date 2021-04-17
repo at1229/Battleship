@@ -1,6 +1,6 @@
 public class Cruiser extends Ships {
     public Cruiser() {
-        size = 3;
-        letter = "C"; 
+        this.size = 3;
+        this.letter = "C"; 
     }
 }

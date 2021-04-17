@@ -1,6 +1,6 @@
 public class AircraftCarrier extends Ships {
     public AircraftCarrier() {
-        size = 5;
-        letter = "A";
+        this.size = 5;
+        this.letter = "A";
     }
 }
