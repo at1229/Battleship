@@ -41,6 +41,7 @@ public class BattleshipGame {
         ships.add(new Battleships());
         ships.add(new Cruiser());
         ships.add(new Destroyer());
+        ships.add(new Destroyer());
     }
 
 
