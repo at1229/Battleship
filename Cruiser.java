@@ -1,4 +1,4 @@
-public class Cruiser extends Ships {
+public class Cruiser extends Ship {
     public Cruiser() {
         this.size = 3;
         this.letter = "C"; 
