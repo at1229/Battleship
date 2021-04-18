@@ -4,16 +4,24 @@ public class Ship {
     ShipBody[] body;
 
     /**
-        1 2 3 4
-     1  x x x o
+        3 4 5 6
+     3  x x x x
 
         size = 4
         letter = A
-        body = (1, 1, false), (1, 2, false), (1, 3, false), (1, 4, true)
+        body = null
+
+        initializeBody(3, 3);
         
 
 
      */
+
+    public void initializeBody(int x, int y) {
+        for(int i = x; i < x + size; i++) {
+            body[i-x] = new ShipBody(i, y);
+        }
+    }
 
     public void hit(int x, int y) {
         for (ShipBody cell: body) {
