@@ -8,11 +8,6 @@ public class BattleshipGame {
     static int col = 10;
     public static String[][] board = new String[row][col];
     public static String[][] playerBoard = new String[row][col];
-
-    AircraftCarrier aircraft = new AircraftCarrier();
-    Battleships battleship = new Battleships();
-    Cruiser cruiser = new Cruiser();
-    Destroyer destroyer = new Destroyer();
     
     public static void main(String[] args) {
         
@@ -21,7 +16,7 @@ public class BattleshipGame {
 
         createEmptyBoard(board);
 
-        placeShips(board);
+        intiialize();
         
     }
 
@@ -31,8 +26,8 @@ public class BattleshipGame {
         this.shipsSunk = 0;
         totalShips = 0;
 
-        playerBoard();
         buildShips();
+        placeRandomShips();
     }
 
     public void buildShips() {
@@ -46,31 +41,30 @@ public class BattleshipGame {
 
     public static void placeRandomShips() {
 
+        //ship coordinate
         Random random = new Random();
-        int randX;
-        int randY;
 
-        randX = random.nextInt(10);
-        randY = random.nextInt(10);
-
-        for (i = 0; i < ships.length; i++);
-            while (canPlaceShip(randX, randY, board) == true) {
-                
-                
+        if (0 <= randomX + shipNumber < 10) {
+            for (i = 0; i < ships.length; i++);
+                while (canPlaceShip(randX, randY, board) == true) {
+                    int randX = random.nextInt(10);
+                    int randY = random.nextInt(10);
+                    board[randX + i][randY]
+            }
         }
+
 
     }
 
     public static boolean canPlaceShip(int row, int col, String[][] board) {
 
-        int shipSize = getShipSize;
-
         if (!(board[row][col] == "-")) {
             return false;
         }
 
-        for (int i = 1; i < shipSize; i++) {
-            if (!(board[row][col] == "-")) {
+        //horizontal
+        for (int i = 1; i < getShipSize(); i++) {
+            if (!(board[row][col + i] == "-")) {
                 return false;
             }
         }
